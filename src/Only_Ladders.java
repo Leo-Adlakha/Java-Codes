@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 /*ONLY LADDERS
@@ -109,6 +110,62 @@ public class Only_Ladders {
 		{
 			return ;
 		}
+		
+	}
+	
+	public static boolean[] primes ( int n )
+	{
+		boolean[] primes = new boolean[n+1] ;
+		Arrays.fill(primes, true);
+		primes[0] = false ;
+		primes[1] = false ;
+		for ( int i = 2 ; i*i <= n ; i++ )
+		{
+			if ( primes[i] )
+			{
+			for ( int mul = 2 ; mul*i <= n ; mul++ )
+			{
+				primes[i*mul] = false ;
+			}
+			}
+		}
+		return primes ;
+	}
+	
+	public static void makeLadder() 
+	{
+		
+		int left = 0 ; 
+		int right = 0 ;
+		
+		while ( left < right )
+		{
+			
+			//while ( )
+			
+			
+			
+		}
+
+	}
+	
+	public static void ladders ( int[] ladders, String ans, int curr, int end )
+	{
+		
+		if ( curr == end )
+		{
+			System.out.println(ans);
+			return ;
+		}
+		
+		//if ( )
+		
+		if ( ladders[curr] != 0 )
+		{
+			ladders(ladders, ans + " ", curr, end);
+		}
+		
+		
 		
 	}
 	

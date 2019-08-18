@@ -19,7 +19,7 @@ Sample Input:
 Sample Output:
 10 30 50*/
 
-public class Remove_Duplicates {
+public class Remove_Duplicate {
 
 	public static void main(String[] args) throws Exception {
 		
@@ -30,7 +30,7 @@ public class Remove_Duplicates {
 		{
 		int N = scn.nextInt();
 
-		Remove_Duplicates m = new Remove_Duplicates() ;
+		Remove_Duplicate m = new Remove_Duplicate() ;
 		
 		LinkedList list = m.new LinkedList();
 
@@ -38,8 +38,9 @@ public class Remove_Duplicates {
 			list.addLast(scn.nextInt());
 		}
 
-	list.eliminateDuplicates();
+	    list.eliminateDuplicates();
 		list.display();
+		System.out.println();
 		}
 }
 	
@@ -251,38 +252,26 @@ public class Remove_Duplicates {
 		}
 	public void eliminateDuplicates() 
 	{
-		Node start = this.head ;
-		Node startn = this.head.next ;
-		int flag = 0 ;
 		
-		if ( start.data == startn.data )
+		Node start = this.head ;
+		Node startn = start.next ;
+		
+		for ( int i = 0 ; i < this.size - 1 ; i++ )
 		{
-			flag = 1 ;
-		}
-
-		for ( int i = 1 ; i < this.size - 1 ; i++ )
-		{
-			int flag2 = 0 ;
-			if ( startn.data == startn.next.data )
+			
+			if ( start.data == startn.data )
 			{
 				start.next = startn.next ;
-				flag2 = 1 ;
+				startn = start.next ;
 			}
-			
-			if ( flag2 != 1 )
+			else
 			{
-			    start = start.next ;
+				start = start.next ;
+				startn = startn.next ;
 			}
-			startn = startn.next ;
+			
 			
 		}
-		
-		if ( flag == 1 )
-		{
-			this.head = this.head.next ;
-		}
-		
-		
 		
 	}
 	

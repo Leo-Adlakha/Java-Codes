@@ -26,7 +26,6 @@ Answer :
 }
 */
 
-
 public class Sudoku_BackTracking {
 
 	static Scanner scn = new Scanner(System.in);
@@ -88,20 +87,18 @@ public class Sudoku_BackTracking {
 					sodukosolver(filled, filledornot, ans + i + "\n", cr + 1, 0);
 
 				filledornot[cr][cc] = false;
-				
-				filled[cr][cc] = 0 ;
-				
+
+				filled[cr][cc] = 0;
+
 			} else if (filledornot[cr][cc] == true) {
 				if (cc < 8)
 					sodukosolver(filled, filledornot, ans + filled[cr][cc] + " ", cr, cc + 1);
 				else if (cc == 8)
 					sodukosolver(filled, filledornot, ans + filled[cr][cc] + "\n", cr + 1, 0);
-				
-				break ;
+
+				break;
 			}
-			
-			
-			
+
 		}
 
 	}

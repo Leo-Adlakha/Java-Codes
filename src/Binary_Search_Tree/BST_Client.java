@@ -6,7 +6,7 @@ public class BST_Client {
 		// TODO Auto-generated method stub
 
 //		int[] in = { 5,10,15,20,25,30,35 } ;
-		int[] in = { 5,10,20,22,25,35 } ;
+		int[] in = { 2,1,3 } ;
 		BST bst = new BST(in) ;
 		bst.display();
 //		System.out.println(bst.find(15)) ;
@@ -20,7 +20,7 @@ public class BST_Client {
 //		bst.additem(19);
 //		bst.additem(37);
 //		bst.display();
-		bst.remove(10);
+		bst.remove(1);
 		bst.display();
 		
 	}

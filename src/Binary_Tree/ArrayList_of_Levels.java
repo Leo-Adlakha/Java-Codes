@@ -79,7 +79,7 @@ public class ArrayList_of_Levels {
 		private ArrayList<ArrayList<Integer>> levelArrayList(Node node) {
 			
 			LinkedList<Node> queue = new LinkedList<>() ;
-			LinkedList<Node> stack = new LinkedList<>() ;
+			LinkedList<Node> helper = new LinkedList<>() ;
 			queue.addLast(node) ;
 			
 			ArrayList<ArrayList<Integer>> ans = new ArrayList<>() ;
@@ -88,27 +88,31 @@ public class ArrayList_of_Levels {
 			while ( !queue.isEmpty() )
 			{
 				
+				
 				Node temp = queue.removeFirst() ;
 				
 				levelans.add(temp.data) ;
-				if ( temp.right != null )
-				    stack.addFirst(temp.right);
+				
 				if ( temp.left != null )
-				    stack.addFirst(temp.left);
+				    helper.addLast(temp.left);
+				if ( temp.right != null )
+				    helper.addLast(temp.right);
+				
 				
 				if ( queue.isEmpty() )
 				{
 					ans.add(levelans) ;
 					levelans = new ArrayList<>() ;
-					queue = stack ;
-					stack = new LinkedList<>() ;
+					queue = helper ;
+					helper = new LinkedList<>() ;
 					
 				}
 			}
 			
 			return ans ;
 		}
-
+		
+       
 	}
 	
 }

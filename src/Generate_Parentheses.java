@@ -1,5 +1,25 @@
 import java.util.Scanner;
 
+/*GENERATE PARENTHESES
+Given an integer 'n'. Print all the possible pairs of 'n' balanced parentheses.
+The output strings should be printed in the sorted order considering '(' has higher value than ')'.
+
+
+Input Format:
+Single line containing an integral value 'n'.
+
+Constraints:
+1<=n<=11
+Output Format:
+Print the balanced parentheses strings with every possible solution on new line.
+
+Sample Input:
+2
+Sample Output:
+()() 
+(()) 
+Time Limit: 1 sec*/
+
 public class Generate_Parentheses {
 
 	static Scanner scn = new Scanner ( System.in ) ;
@@ -54,16 +74,18 @@ public class Generate_Parentheses {
 			return ;
 		}
 		
-		count1++ ;
-		printans(count1, ans + "(", n, count2 );
-		count1-- ;
-		
 		if ( count1 > 0 && count2 < count1 )
 		{
 		count2++ ;
 		printans(count1, ans + ")", n, count2 );
 		count2-- ;
 		}
+		
+		count1++ ;
+		printans(count1, ans + "(", n, count2 );
+		count1-- ;
+		
+		
 	}
 
 }

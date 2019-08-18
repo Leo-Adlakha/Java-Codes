@@ -9,7 +9,7 @@ public class Stock_Span {
 		// TODO Auto-generated method stub
 
 		
-		int[] prices = { 5,10,3,2,7,15 } ;
+		int[] prices = { 5,1,3,2,17,15 } ;
 		for ( int val : display(prices) )
 		{
 			System.out.print( val + " " );

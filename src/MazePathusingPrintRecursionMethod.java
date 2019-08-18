@@ -33,5 +33,27 @@ public class MazePathusingPrintRecursionMethod {
 		return waysH + waysV ;
 		
 	}
+	
+	public static int getmazepathD(int cr, int cc, int er, int ec, String ans )
+	{
+		if ( cr == er && cc == ec )
+		{
+			System.out.println(ans);
+			return 1 ;
+		}
+		
+		int waysH = 0 ;
+		int waysV = 0 ;
+		int waysD = 0 ;
+		if ( cc < ec )
+		    waysH += getmazepath ( cr, cc + 1, er, ec, ans + "H") ;
+		if ( cr < er )
+			waysV += getmazepath ( cr + 1, cc, er, ec, ans + "V") ;
+		if ( cr < er && cc < ec )
+			waysD += getmazepath ( cr + 1, cc + 1 , er, ec, ans + "D") ;
+		
+		return waysH + waysV + waysD ;
+		
+	}
 
 }

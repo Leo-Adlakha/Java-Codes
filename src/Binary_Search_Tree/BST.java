@@ -51,18 +51,18 @@ public class BST {
 		
 		if ( node.left == null )
 		{
-			str += "." ;
+			str += "END" ;
 		}
 		else
 		{
 			str += node.left.data ;
 		}
 		
-		str += "->" + node.data + "<-" ;
+		str += " => " + node.data + " <= " ;
 		
 		if ( node.right == null )
 		{
-			str += "." ;
+			str += "END" ;
 		}
 		else
 		{
@@ -245,6 +245,11 @@ public class BST {
 		
 	}
 
+	public void display2 ()
+	{
+		
+	}
+	
 	public void additem ( int item )
 	{
 		additem(this.root, item) ;

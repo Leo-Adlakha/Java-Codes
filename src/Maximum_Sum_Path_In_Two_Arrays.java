@@ -59,8 +59,6 @@ public class Maximum_Sum_Path_In_Two_Arrays {
 		
 		while ( i < a.length && j < b.length )
 		{
-			sum1 = 0 ;
-			sum2 = 0 ;
 			if ( a[i] < b[j] )
 			{
 				sum1 += a[i] ;

@@ -5,7 +5,6 @@ import java.util.Scanner;
 /*EVEN-AFTER-ODD
 Arrange elements in a Linked List such that all even numbers are placed after odd numbers.
 
-
 Input Format:
 Enter N space separated Elements
 
@@ -20,7 +19,29 @@ Sample Input:
 Sample Output:
 1 1 2 2 2*/
 
-class LinkedList {
+public class Even_after_odd 
+{
+	
+public static void main(String[] args) throws Exception {
+		
+		Scanner scn = new Scanner(System.in);
+		
+		Even_after_odd m = new Even_after_odd() ;
+		
+		int N = scn.nextInt();
+
+		Linked_List list = m.new Linked_List();
+
+		for (int i = 0; i < N; i++) {
+			list.addLast(scn.nextInt());
+		}
+
+		list.evenAfterOdd();
+		list.display();
+}
+
+
+ public class Linked_List {
 	private class Node {
 		int data;
 		Node next;
@@ -35,13 +56,13 @@ class LinkedList {
 	private Node tail;
 	private int size;
 
-	public LinkedList() {
+	public Linked_List() {
 		this.head = null;
 		this.tail = null;
 		this.size = 0;
 	}
 
-	public LinkedList(Node head, Node tail, int size) {
+	public Linked_List(Node head, Node tail, int size) {
 		this.head = head;
 		this.tail = tail;
 		this.size = size;
@@ -237,6 +258,7 @@ class LinkedList {
 			if ( temp.data % 2 == 0 )
 			{
 				addLast(removeAt(i)) ;
+				i-- ;
 			}
 			i++ ;
 			temp = temp.next ;
@@ -245,20 +267,7 @@ class LinkedList {
 		
 		
     }
-public static void main(String[] args) throws Exception {
-		
-		Scanner scn = new Scanner(System.in);
-		int N = scn.nextInt();
 
-		
-		LinkedList list = new LinkedList();
-
-		for (int i = 0; i < N; i++) {
-			list.addLast(scn.nextInt());
-		}
-
-		list.evenAfterOdd();
-		list.display();
 }
 }
 

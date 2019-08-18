@@ -20,20 +20,20 @@ public class Linked_List_Client {
 		
 	    list.display();
 	    System.out.println();
-//	    list.reverseDI();
-//	    list.display();
-//	    System.out.println();
-//	    list.reversePI();
-//	    list.display();
-//	    System.out.println();
-//	    list.reversePR();
-//	    list.display();
-//	    System.out.println();
-//	    list.reverseDRway1();
-//	    list.display();
-//	    System.out.println();
-//	    list.reverseDRway2();
-//	    list.display();
+	    list.reverseDI();
+	    list.display();
+	    System.out.println();
+	    list.reversePI();
+	    list.display();
+	    System.out.println();
+	    list.reversePR();
+	    list.display();
+	    System.out.println();
+	    list.reverseDRway1();
+	    list.display();
+	    System.out.println();
+	    list.reverseDRway2();
+	    list.display();
 	    
 //	    list.fold();
 //	    list.display();
@@ -47,9 +47,9 @@ public class Linked_List_Client {
 //	    list.display();
 //	    System.out.println();
 	    
-	    list.MergeSort();
-	    list.display();
-	    System.out.println();
+//	    list.MergeSort();
+//	    list.display();
+//	    System.out.println();
 	     
 	}
 

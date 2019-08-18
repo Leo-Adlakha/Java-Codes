@@ -24,7 +24,7 @@ Sample Input:
 7 0 0 0 2 0 0 0 6 
 0 6 0 0 0 0 2 8 0 
 0 0 0 4 1 9 0 0 5 
-0 0 0 0 8 0 0 7 9 
+0 0 0 0 8 0 0 7 9
 Sample Output:
 5 3 4 6 7 8 9 1 2 
 6 7 2 1 9 5 3 4 8 
@@ -49,15 +49,11 @@ public class Sudoku_Solver_General {
 
 		int[][] filled = putininitially(n,n,bl) ;
 
-		
-		long start = System.currentTimeMillis();
-
+		long start = System.currentTimeMillis() ;
 		sodukosolver(n, filled, bl, "", 0, 0);
 
 		long end = System.currentTimeMillis();
-
-		System.out.println(end - start);
-
+		System.out.println(end-start);
 	}
 
 	public static int[][] putininitially(int r, int c, boolean[][] bl) {
@@ -108,7 +104,7 @@ public class Sudoku_Solver_General {
 
 				if (cc < n - 1)
 
-					sodukosolver(n, filled, filledornot, ans + i, cr, cc + 1);
+					sodukosolver(n, filled, filledornot, ans + i + " ", cr, cc + 1);
 
 				else if (cc == n - 1 )
 
@@ -123,7 +119,7 @@ public class Sudoku_Solver_General {
 
 				if (cc < n - 1 )
 
-					sodukosolver(n, filled, filledornot, ans + filled[cr][cc], cr, cc + 1);
+					sodukosolver(n, filled, filledornot, ans + filled[cr][cc] + " ", cr, cc + 1);
 
 				else if (cc == n - 1 )
 
@@ -183,10 +179,10 @@ public class Sudoku_Solver_General {
 
 		int cf;
 		
-		ri = ( cr / (n/3) ) * (n/3) ;
-		rf = ( ri + ((n/3) - 1 ) ) ;
-		ci = ( cc / (n/3) ) * (n/3) ;
-		cf = ( ci + ((n/3) - 1 ) ) ;
+		ri = cr - (cr%3) ;
+		rf = cr - (cr%3) + 2 ;
+		ci = cc - (cc%3) ;
+		cf = cc - (cc%3) + 2 ;
 
 		for (int i = ri; i <= rf; i++) {
 
