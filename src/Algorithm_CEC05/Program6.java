@@ -1,9 +1,10 @@
 package Algorithm_CEC05;
-import java.util.* ;
 
-public class Sorting {
+import java.util.Scanner;
 
-	static Scanner scn = new Scanner(System.in) ;
+public class Program6 {
+
+static Scanner scn = new Scanner(System.in) ;
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -78,5 +79,6 @@ public class Sorting {
 			c[j+1] = t ;
 		}
 	}
+
 
 }
