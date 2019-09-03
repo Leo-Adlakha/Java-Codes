@@ -5,14 +5,14 @@ public class Stack_Class {
 	protected int[] data ;
 	protected int tos ;
 	
-	public Stack_Class()
+	private Stack_Class()
 	{
 		this.data = new int[5] ;
 		this.tos = - 1 ;
 	}
 	
 	
-	public Stack_Class(int cap)
+	private Stack_Class(int cap)
 	{
 		this.data = new int[cap] ;
 		this.tos = -1 ;
