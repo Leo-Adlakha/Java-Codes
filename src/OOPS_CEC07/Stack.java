@@ -1,4 +1,4 @@
-package Algorithm_CEC05;
+package OOPS_CEC07;
 
 public class Stack {
 
