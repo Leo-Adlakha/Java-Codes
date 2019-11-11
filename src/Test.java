@@ -2,24 +2,18 @@ import java.util.* ;
 
 public class Test{
 	
-	public static void A(){
-        System.out.print("Good ");
-        throw new RuntimeException();
+	static Scanner scn = new Scanner(System.in) ;
+	
+    public static void main(String[] args) throws Throwable {
+    	
+    	String hello = scn.nextLine();
+    	System.out.println(hello);
+    	
     }
-    public static void B(){
-         A();
-         System.out.print("This ");
-    }
-    public static void main(String[] args){
-        try{
-           B();
-        }
-        catch(Exception e){
-           System.out.print("Time ");
-        }
-        finally{
-           System.out.print("at CodingNinjas");
-        }
+    
+    public static void fun() throws Exception {
+    	System.out.println("Hello World");
+    	throw new Exception("Hello World") ;
     }
 	
-}
+} 
